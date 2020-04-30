@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VideoSync</title>
+</head>
+<body onload="start()">
+	<video controls autoplay muted>
+		<source src="data/filme.mkv" type="video/mp4">
+		<track src="data/legenda.vtt" kind="subtitles" srclang="pt" label="Português" default="true">
+		Video not supported
+	</video>
+
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		const firebaseConfig = {
+			apiKey: "AIzaSyCKssvJR68ppZVWPHtqncL3go7ANsKgkdM",
+			authDomain: "videosync-bbad3.firebaseapp.com",
+			databaseURL: "https://videosync-bbad3.firebaseio.com",
+			projectId: "videosync-bbad3",
+			storageBucket: "videosync-bbad3.appspot.com",
+			messagingSenderId: "1050899319216",
+			appId: "1:1050899319216:web:75ce5156b26e03792f2e75",
+			measurementId: "G-EF5NC7X44N"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		// firebase.analytics();
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+	<script src="javascript/sketch.js"></script>
+</body>
+</html>
